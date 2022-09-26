@@ -8,43 +8,22 @@ const todoList = () => {
   };
 
   const overdue = () => {
-    // Write the date check condition here and return the array of overdue items accordingly.
-    // FILL YOUR CODE HERE
-    // ..
-    // ..
-    // ..
     return all.filter((todo) => todo.dueDate < today);
   };
 
   const dueToday = () => {
-    // Write the date check condition here and return the array of todo items that are due today accordingly.
-    // FILL YOUR CODE HERE
-    // ..
-    // ..
-    // ..
     return all.filter((todo) => todo.dueDate == today);
   };
 
   const dueLater = () => {
-    // Write the date check condition here and return the array of todo items that are due later accordingly.
-    // FILL YOUR CODE HERE
-    // ..
-    // ..
-    // ..
     return all.filter((todo) => todo.dueDate > today);
   };
 
   const toDisplayableList = (list) => {
-    // Format the To-Do list here, and return the output string as per the format given above.
-    // FILL YOUR CODE HERE
-    // ..
-    // ..
-    // ..
-    // return OUTPUT_STRING
     return list
       .map(
         (todo) =>
-          `${todo.completed ? "[X]" : "[ ]"} ${todo.title} ${
+          `${todo.completed ? "[x]" : "[ ]"} ${todo.title} ${
             todo.dueDate == today ? "" : todo.dueDate
           }`
       )
